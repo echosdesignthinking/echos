@@ -105,9 +105,9 @@
           </div>
           <div class="col-md-3">
             <p style="margin-top: 20%; font-weight: 700">Coming dates:</p>
-            <p style="font-size: 16px">Melbourne:Mar 5th  – 7th<br>
-              Sydney: Mar 19th – 21t<br>
-              Brisbane:Apr 17th  – 19th
+            <p style="font-size: 16px">Melbourne: Feb 27th to Mar 1st<br>
+              Brisbane: Apr 17th to Apr 19th<br>
+              Sydney: coming soon
             </p>
             <p style="font-size: 16px">Duration: <span style="font-weight: 700">3 days</span></p>
           </div>
@@ -311,58 +311,68 @@ function myFunction() {
   }
 
   // analisando filtros individuais
+  //Melbourne - DTx February
+  <!--
   var x = document.getElementById("melbourne-dtx-feb");
   if ((feb === true) && (dtx === true) && (mel === true))  {
       x.style.display = "block";
   } else {
       x.style.display = "none";
   }
-
-  var x = document.getElementById("melbourne-dtx-jun");
-  if ((jun === true) && (dtx === true) && (mel === true))  {
+  -->
+  //Melbourne - DTx March
+  <!--
+  var x = document.getElementById("melbourne-dtx-mar");
+  if ((mar === true) && (dtx === true) && (mel === true))  {
       x.style.display = "block";
   } else {
       x.style.display = "none";
   }
-
+  -->
+  //Melbourne - DTx October
+  <!--
   var x = document.getElementById("melbourne-dtx-oct");
   if ((oct === true) && (dtx === true) && (mel === true))  {
       x.style.display = "block";
   } else {
       x.style.display = "none";
   }
+  -->
 
-
-
-  var x = document.getElementById("sydney-dtx-feb");
-  if ((feb === true) && (dtx === true) && (syd === true))  {
+ // Sydney DTx March
+  var x = document.getElementById("sydney-dtx-mar");
+  if ((mar === true) && (dtx === true) && (syd === true))  {
       x.style.display = "block";
   } else {
       x.style.display = "none";
   }
-
+   // Sydney DTx August
+  <!--
   var x = document.getElementById("sydney-dtx-aug");
   if ((aug === true) && (dtx === true) && (syd === true))  {
       x.style.display = "block";
   } else {
       x.style.display = "none";
   }
-
-
-
-  var x = document.getElementById("brisbane-dtx-sep");
-  if ((sep === true) && (dtx === true) && (bri === true))  {
-      x.style.display = "block";
-  } else {
-      x.style.display = "none";
-  }
-
+  -->
+  // Brisbane DTx April
   var x = document.getElementById("brisbane-dtx-apr");
   if ((apr === true) && (dtx === true) && (bri === true))  {
       x.style.display = "block";
   } else {
       x.style.display = "none";
   }
+
+   // brisbane DTx September
+  <!--
+  var x = document.getElementById("brisbane-dtx-sep");
+  if ((sep === true) && (dtx === true) && (bri === true))  {
+      x.style.display = "block";
+  } else {
+      x.style.display = "none";
+  }
+  -->
+
 
   // verificando se todos estiverem ocultos
   var parentVar = document.getElementById("parent");
@@ -382,22 +392,23 @@ function myFunction() {
 }
 </script>
 
-            <button onclick="myFunction()">Apply Now</button>
+            <button onclick="myFunction()">Apply</button>
 
             <div class="spacer"></div>
 
 
             <div id="parent">
               <div id="noneSelected" style="display: none; text-align: center" class="box">NO MATCHES FOUND</div>
-              <div id="melbourne-dtx-feb" class="box melbourne dtx february"><img src="img/melbourne-dtx-feb.png"></div>
-              <div id="melbourne-dtx-jun" class="box melbourne dtx june"><img src="img/melbourne-dtx-jun.png"></div>
-              <div id="melbourne-dtx-oct" class="box melbourne dtx october"><img src="img/melbourne-dtx-oct.png"></div>
+            <!--  <div id="melbourne-dtx-feb" class="box melbourne dtx february"><img src="img/melbourne-dtx-feb.png"></div>
+                  <div id="melbourne-dtx-oct" class="box melbourne dtx october"><img src="img/melbourne-dtx-oct.png"></div> -->
+                  <div id="melbourne-dtx-mar" class="box melbourne dtx march"><img src="img/melbourne-dtx-mar.png"></div>
 
 
 
-              <div id="sydney-dtx-feb" class="box sydney dtx february"><img src="img/sydney-dtx-feb.png"></div>
-              <div id="sydney-dtx-aug" class="box sydney dtx august"><img src="img/sydney-dtx-aug.png"></div>
-              <div id="brisbane-dtx-sep" class="box brisbane dtx september"><img src="img/brisbane-dtx-sep.png"></div>
+              <div id="sydney-dtx-mar" class="box sydney dtx march"><img src="img/sydney-dtx-mar.png"></div>
+              <!-- <div id="sydney-dtx-aug" class="box sydney dtx august"><img src="img/sydney-dtx-aug.png"></div> -->
+
+              <!-- <div id="brisbane-dtx-sep" class="box brisbane dtx september"><img src="img/brisbane-dtx-sep.png"></div> -->
               <div id="brisbane-dtx-apr" class="box brisbane dtx april"><img src="img/brisbane-dtx-apr.png"></div>
             </div>
         </div>
