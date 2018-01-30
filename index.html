@@ -311,15 +311,6 @@ function myFunction() {
   }
 
   // analisando filtros individuais
-  // Design Thinkin Experience
-  // Melbourne
-  var x = document.getElementById("melbourne-dtx-feb");
-  if ((feb === true) && (dtx === true) && (mel === true))  {
-      x.style.display = "block";
-  } else {
-      x.style.display = "none";
-  }
-
   var x = document.getElementById("melbourne-dtx-mar");
   if ((mar === true) && (dtx === true) && (mel === true))  {
       x.style.display = "block";
@@ -327,8 +318,15 @@ function myFunction() {
       x.style.display = "none";
   }
 
-  var x = document.getElementById("melbourne-dtx-oct");
-  if ((oct === true) && (dtx === true) && (mel === true))  {
+  var x = document.getElementById("brisbane-dtx-apr");
+  if ((apr === true) && (dtx === true) && (bri === true))  {
+      x.style.display = "block";
+  } else {
+      x.style.display = "none";
+  }
+
+  var x = document.getElementById("sydney-dtx-mar");
+  if ((mar === true) && (dtx === true) && (syd === true))  {
       x.style.display = "block";
   } else {
       x.style.display = "none";
