@@ -258,7 +258,7 @@ li {
   height: 20px;
 }
 
-.section9 select {
+select {
   padding: 7px;
   text-align: center;
   background-color: #fff;
@@ -267,7 +267,7 @@ li {
   margin-right: 10px
 }
 
-.section9 button {
+button {
   padding: 10px;
   text-align: center;
   background-color: rgba(221,50,33,1);
@@ -348,5 +348,21 @@ li {
 .popup h2 {
   text-align: center;
   font-size: 28px;
-  margin-top: 0px  
+  margin-top: 0px
+}
+
+#studentDiv {
+  display: none;
+}
+
+#educatorDiv {
+  display: none
+}
+
+#corporateDiv {
+  display: none
+}
+
+#startupDiv {
+  display: none
 }

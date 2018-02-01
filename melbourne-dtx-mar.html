@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DTX Melbourne | Echos</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Learn Design Thinking for Real" />
+  <meta name="keywords" content="design thinking" />
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="Design Thinking Experience | Echos" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Learn Design Thinking in a 3-Day Intensive Course" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="628" />
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="img/favicon.ico" sizes="32x32" type="image/png">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/landing.css">
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script type="text/javascript" src="js/dates.js"></script>
+
+
+</head>
+  <body>
+    <div class="col-md-12 header">
+      <div class="container">
+        <ul>
+          <li><img src="img/logo.png"></li>
+        </ul>
+      </div>
+    </div>
+
+  <section>
+    <div class="col-md-12 section1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h2 style="color: #CA0AFF">Design Thinking Experience</h2>
+            <h3>Melbourne</h3>
+            <p>March 5th to 7th</p>
+          </div>
+          <div class="col-md-3">
+            <p style="font-weight: 700; margin-top: 50px">Investment</p>
+            <p style="font-size: 16px">Student – $1,000<br>
+              Educator & Startup – $1,800<br>
+              Corporate – $2,500 (Early Bird gets 10% off)<br>
+              Groups of 3 & 5 – $2,150 (per participant)
+            </p>
+            <img src="img/stripe-badges.png" width="100%">
+          </div>
+          <div class="col-md-5" style="text-align: center">
+
+            <p style="margin-top: 50px">Choose your type of investment:</p>
+            <select>
+              <option id="investment" class="active btn" data-filter="box">Choose your investiment</option>
+              <option id="student" class="btn">Student</option>
+              <option id="educator" class="btn">Educator</option>
+              <option id="corporate" class="btn">Corporate</option>
+              <option id="startup" class="btn">Startup</option>
+            </select>
+            <!-- Stripe Form -->
+            <script src="https://checkout.stripe.com/checkout.js"></script>
+
+            <script>
+
+            function stripeButton() {
+              if (document.getElementById("student").selected) {
+                var x = document.getElementById("studentDiv");
+                var y = document.getElementById("educatorDiv");
+                var z = document.getElementById("corporateDiv");
+                var v = document.getElementById("startupDiv");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                    y.style.display = "none";
+                    z.style.display = "none";
+                    v.style.display = "none";
+                } else {
+                    x.style.display = "none";
+                }
+              }
+
+              if (document.getElementById("educator").selected) {
+                var x = document.getElementById("studentDiv");
+                var y = document.getElementById("educatorDiv");
+                var z = document.getElementById("corporateDiv");
+                var v = document.getElementById("startupDiv");
+                if (y.style.display === "none") {
+                    y.style.display = "block";
+                    x.style.display = "none";
+                    z.style.display = "none";
+                    v.style.display = "none";
+                } else {
+                    y.style.display = "none";
+                }
+              }
+
+              if (document.getElementById("corporate").selected) {
+                var x = document.getElementById("studentDiv");
+                var y = document.getElementById("educatorDiv");
+                var z = document.getElementById("corporateDiv");
+                var v = document.getElementById("startupDiv");
+                if (z.style.display === "none") {
+                    z.style.display = "block";
+                    x.style.display = "none";
+                    y.style.display = "none";
+                    v.style.display = "none";
+                } else {
+                    z.style.display = "none";
+                }
+              }
+
+              if (document.getElementById("startup").selected) {
+                var x = document.getElementById("studentDiv");
+                var y = document.getElementById("educatorDiv");
+                var z = document.getElementById("corporateDiv");
+                var v = document.getElementById("startupDiv");
+                if (v.style.display === "none") {
+                    v.style.display = "block";
+                    x.style.display = "none";
+                    y.style.display = "none";
+                    z.style.display = "none";
+                } else {
+                    z.style.display = "none";
+                }
+              }
+
+            }
+
+
+            </script>
+
+            <button onclick="stripeButton()">Apply</button>
+            <br><br>
+            <div id="studentDiv" class="stripeButton">
+              <p>Student  : AUD $1,000<br>
+              <span style="font-size: 12px">You'll be asked to provide a valid ID</span></p>
+              <button id="studentButton">Enroll Now</button>
+            </div>
+            <div id="educatorDiv" class="stripeButton">
+              <p>Educator: AUD $1,800<br>
+              <span style="font-size: 12px">You'll be asked to provide a valid ID</span></p>
+              <button id="educatorButton">Enroll Now</button>
+            </div>
+            <div id="startupDiv" class="stripeButton">
+              <p>Startup: AUD $1,800<br>
+              <span style="font-size: 12px">You'll be asked to provide a valid ID</span></p>
+              <button id="startupButton">Enroll Now</button>
+            </div>
+            <div id="corporateDiv" class="stripeButton">
+              <p>Corporate: AUD $2,500<br>
+              <span style="font-size: 12px">You'll be asked to provide a valid ID</span></p>
+              <button id="corporateButton">Enroll Now</button>
+            </div>
+
+
+            <script>
+            var handler = StripeCheckout.configure({
+              key: 'pk_test_Z2sYjHY5lQfZMWQGmAOtbq9u',
+              image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+              locale: 'auto',
+              token: function(token) {
+                // You can access the token ID with `token.id`.
+                // Get the token ID to your server-side code for use.
+              }
+            });
+
+            document.getElementById('corporateButton').addEventListener('click', function(e) {
+              // Open Checkout with further options:
+              handler.open({
+                name: 'Design Thinking Echos',
+                description: 'Melbourne | Corporate',
+                zipCode: true,
+                currency: 'aud',
+                amount: 2500000
+              });
+              e.preventDefault();
+            });
+
+            // Close Checkout on page navigation:
+            window.addEventListener('popstate', function() {
+              handler.close();
+            });
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="col-md-12 section10" style="margin-top: 50px">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h2>Testimonials</h2>
+            <div class="line"></div>
+          </div>
+          <div class="col-md-8">
+            <div class="testimonial-box">
+              <h5>Maria Stavrakis</h5>
+              <p>Design Thinking Experience Program - Melbourne</p>
+              <p><em>“I am very grateful for having participated in the design thinking experience course. It has introduced me to a new mindset and knowledge that will help me change the way I approach my own business and my clients’ projects. The toolkit provided is very helpful and a great reference tool for the future. This was a great and valuable experience I would highly recommend to anyone that is searching for a new way of working (no matter what work they do) and a new mindset. I left the course feeling inspired and ready to start practicing design thinking in my own business.”</em></p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="col-md-12 section11">
+      <div class="container">
+        <h2>Team</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="team">
+              <img src="img/ricardo-205x205.jpg">
+              <h5>Ricardo Ruffo</h5>
+              <h6>Facilitator</h6>
+              <p>As an innovation expert and entrepreneur, Ricardo is a founding partner of various initiatives including Echos - School of Design Thinking, a global innovation lab that aims to create social value through business innovation</p>
+              <p>He is a consultant and speaker on topics like innovation, entrepreneurship, business design and growth hacking. Specialist in Entrepreneurship and Innovation, with extensions in renowned schools like MIT and Berkeley in the United States. Ricardo studied Social Innovation at the School of Visual Arts in New York and Design Thinking by HPI – d.school in Germany.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="team">
+              <img src="img/juliana-205x205.jpg">
+              <h5>Juliana Proserpio</h5>
+              <h6>Facilitator</h6>
+              <p>Juliana is an entrepreneur and educator. She is the co-founder of Echos, an innovation lab, school and consulting firm focused on innovation projects. Over the last four years, Juliana has worked to develop an innovation ecosystem in Brazil to foster social innovation and Design Thinking.</p>
+              <p>She has led projects in different industries such as healthcare, construction and not-for-profit organisations. </p>
+              <p>Juliana speaks on the power of design to create a world we want to live in. She was featured in events such as the Global Innovation Summit in San Jose, California and TEDxMaua in Sao Paulo, Brasil. In 2015, Juliana became a judge at the first William Drenttel Award for Excellence in Design.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="team">
+              <img src="img/Fabio_BIO 205x205.png">
+              <h5>Fabio Oliveira</h5>
+              <h6>Facilitator</h6>
+              <p>Fabio Oliveira is Country Manager and Facilitator at Echos - School of Design Thinking. Prior to joining Echos, Fabio was Head of Innovation at Kmart Australia, where he developed several projects using Design Thinking in areas such as Store Operations, Payments, Customer Experience and Supply Chain.</p>
+              <p>Fabio is an advocate of a practical and results-driven approach to corporate innovation, having spoken in several events in Australia.</p>
+              <p>Since 2011, he is a co-organiser at the Global Service Jam (Melbourne and Sao Paulo editions), the largest Design Thinking and Service Design event in the world.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="col-md-12 footer">
+      <div class="container">
+        <p></p>
+    </div>
+  </section>
+
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $('a[href^="#"]').click(function(){
+      var the_id = $(this).attr("href");
+      if (the_id === '#') {
+        return;
+      }
+      $('html, body').animate({
+        scrollTop:$(the_id).offset().top
+      }, 'slow');
+        return false;
+      });
+  </script>
+
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+
+  <!-- Include jQuery Popup Overlay -->
+  <script src="js/popup.js"></script>
+
+</html>
