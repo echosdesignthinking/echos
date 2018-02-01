@@ -126,7 +126,7 @@
                     y.style.display = "none";
                     z.style.display = "none";
                 } else {
-                    z.style.display = "none";
+                    v.style.display = "none";
                 }
               }
 
@@ -138,7 +138,7 @@
             <button onclick="stripeButton()">Apply</button>
             <br><br>
             <div id="studentDiv" class="stripeButton">
-              <p>Student  : AUD $1,000<br>
+              <p>Student: AUD $1,000<br>
               <span style="font-size: 12px">You'll be asked to provide a valid ID</span></p>
               <button id="studentButton">Enroll Now</button>
             </div>
@@ -162,7 +162,7 @@
             <script>
             var handler = StripeCheckout.configure({
               key: 'pk_test_Z2sYjHY5lQfZMWQGmAOtbq9u',
-              image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+              image: 'http://learn.schoolofdesignthinking.echos.cc/img/badge.png',
               locale: 'auto',
               token: function(token) {
                 // You can access the token ID with `token.id`.
@@ -177,7 +177,43 @@
                 description: 'Melbourne | Corporate',
                 zipCode: true,
                 currency: 'aud',
-                amount: 2500000
+                amount: 250000
+              });
+              e.preventDefault();
+            });
+
+            document.getElementById('studentButton').addEventListener('click', function(e) {
+              // Open Checkout with further options:
+              handler.open({
+                name: 'Design Thinking Echos',
+                description: 'Melbourne | Student',
+                zipCode: true,
+                currency: 'aud',
+                amount: 100000
+              });
+              e.preventDefault();
+            });
+
+            document.getElementById('startupButton').addEventListener('click', function(e) {
+              // Open Checkout with further options:
+              handler.open({
+                name: 'Design Thinking Echos',
+                description: 'Melbourne | Startup',
+                zipCode: true,
+                currency: 'aud',
+                amount: 180000
+              });
+              e.preventDefault();
+            });
+
+            document.getElementById('educatorButton').addEventListener('click', function(e) {
+              // Open Checkout with further options:
+              handler.open({
+                name: 'Design Thinking Echos',
+                description: 'Melbourne | Educator',
+                zipCode: true,
+                currency: 'aud',
+                amount: 180000
               });
               e.preventDefault();
             });
