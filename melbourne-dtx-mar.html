@@ -73,34 +73,18 @@
               var y = document.getElementById("educatorDiv");
               var z = document.getElementById("corporateDiv");
               var v = document.getElementById("startupDiv");
-              if (document.getElementById("student").selected) {
-                if (x.style.display === "none") {
-                    x.style.display = "block";
-                } else {
-                    x.style.display = "none";
-                }
-              }
-              if (document.getElementById("educator").selected) {
-                if (y.style.display === "none") {
-                    y.style.display = "block";
-                } else {
-                    y.style.display = "none";
-                }
-              }
-              if (document.getElementById("corporate").selected) {
-                if (z.style.display === "none") {
-                    z.style.display = "block";
-                } else {
-                    z.style.display = "none";
-                }
-              }
-              if (document.getElementById("startup").selected) {
-                if (v.style.display === "none") {
-                    v.style.display = "block";
-                } else {
-                    v.style.display = "none";
-                }
-              }
+              x.style.display = "none";
+              y.style.display = "none";
+              z.style.display = "none";
+              v.style.display = "none";
+              if (document.getElementById("student").selected)
+                x.style.display = "block";
+              if (document.getElementById("educator").selected)
+                y.style.display = "block";
+              if (document.getElementById("corporate").selected)
+                z.style.display = "block";
+              if (document.getElementById("startup").selected)
+                 v.style.display = "block";
             }
             </script>
 
