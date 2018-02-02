@@ -50,7 +50,7 @@
             <p style="font-size: 16px">Student – $1,000<br>
               Educator & Startup – $1,800<br>
               Corporate – $2,500 (Early Bird gets 10% off)<br>
-              Groups of 3 & 5 – $2,150 (per participant)
+              Groups of 3 to 5 – $2,150 (per participant)
             </p>
             <img src="img/stripe-badges.png" width="100%">
           </div>
@@ -114,7 +114,7 @@
 
             <script>
             var handler = StripeCheckout.configure({
-              key: 'pk_test_Z2sYjHY5lQfZMWQGmAOtbq9u',
+              key: 'pk_live_D3WJhHEiq4RyBGd7qVoVmpTz',
               image: 'http://learn.schoolofdesignthinking.echos.cc/img/badge.png',
               locale: 'auto',
               token: function(token) {
@@ -129,7 +129,7 @@
                 description: 'DTx | Melbourne 5 - 7 March | Corporate',
                 billingAddress:true,
                 currency: 'aud',
-                amount: 250000
+                amount: 100
               });
               e.preventDefault();
             });
