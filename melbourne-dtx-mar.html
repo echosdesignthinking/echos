@@ -69,58 +69,34 @@
 
             <script>
             function stripeButton() {
+              var x = document.getElementById("studentDiv");
+              var y = document.getElementById("educatorDiv");
+              var z = document.getElementById("corporateDiv");
+              var v = document.getElementById("startupDiv");
               if (document.getElementById("student").selected) {
-                var x = document.getElementById("studentDiv");
-                var y = document.getElementById("educatorDiv");
-                var z = document.getElementById("corporateDiv");
-                var v = document.getElementById("startupDiv");
                 if (x.style.display === "none") {
                     x.style.display = "block";
-                    y.style.display = "none";
-                    z.style.display = "none";
-                    v.style.display = "none";
                 } else {
                     x.style.display = "none";
                 }
               }
               if (document.getElementById("educator").selected) {
-                var x = document.getElementById("studentDiv");
-                var y = document.getElementById("educatorDiv");
-                var z = document.getElementById("corporateDiv");
-                var v = document.getElementById("startupDiv");
                 if (y.style.display === "none") {
                     y.style.display = "block";
-                    x.style.display = "none";
-                    z.style.display = "none";
-                    v.style.display = "none";
                 } else {
                     y.style.display = "none";
                 }
               }
               if (document.getElementById("corporate").selected) {
-                var x = document.getElementById("studentDiv");
-                var y = document.getElementById("educatorDiv");
-                var z = document.getElementById("corporateDiv");
-                var v = document.getElementById("startupDiv");
                 if (z.style.display === "none") {
                     z.style.display = "block";
-                    x.style.display = "none";
-                    y.style.display = "none";
-                    v.style.display = "none";
                 } else {
                     z.style.display = "none";
                 }
               }
               if (document.getElementById("startup").selected) {
-                var x = document.getElementById("studentDiv");
-                var y = document.getElementById("educatorDiv");
-                var z = document.getElementById("corporateDiv");
-                var v = document.getElementById("startupDiv");
                 if (v.style.display === "none") {
                     v.style.display = "block";
-                    x.style.display = "none";
-                    y.style.display = "none";
-                    z.style.display = "none";
                 } else {
                     v.style.display = "none";
                 }
