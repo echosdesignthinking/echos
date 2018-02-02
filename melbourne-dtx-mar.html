@@ -69,77 +69,58 @@
 
             <script>
             function stripeButton() {
-
-              var handler = StripeCheckout.configure({
-                key: 'pk_test_Z2sYjHY5lQfZMWQGmAOtbq9u',
-                image: 'http://learn.schoolofdesignthinking.echos.cc/img/badge.png',
-                locale: 'auto',
-                token: function(token) {
-                  // You can access the token ID with `token.id`.
-                  // Get the token ID to your server-side code for use.
-                }
-              });
-
-              var x = document.getElementById("studentDiv");
-              var y = document.getElementById("educatorDiv");
-              var z = document.getElementById("corporateDiv");
-              var v = document.getElementById("startupDiv");
               if (document.getElementById("student").selected) {
+                var x = document.getElementById("studentDiv");
+                var y = document.getElementById("educatorDiv");
+                var z = document.getElementById("corporateDiv");
+                var v = document.getElementById("startupDiv");
                 if (x.style.display === "none") {
                     x.style.display = "block";
-                    handler.open({
-                      name: 'Design Thinking Experience',
-                      description: 'DTx Melbourne | Student',
-                      zipCode: true,
-                      currency: 'aud',
-                      amount: 100000
-                    });
-                    e.preventDefault();
+                    y.style.display = "none";
+                    z.style.display = "none";
+                    v.style.display = "none";
                 } else {
                     x.style.display = "none";
                 }
               }
               if (document.getElementById("educator").selected) {
+                var x = document.getElementById("studentDiv");
+                var y = document.getElementById("educatorDiv");
+                var z = document.getElementById("corporateDiv");
+                var v = document.getElementById("startupDiv");
                 if (y.style.display === "none") {
                     y.style.display = "block";
-                    handler.open({
-                      name: 'Design Thinking Experience',
-                      description: 'DTx Melbourne | Educator',
-                      zipCode: true,
-                      currency: 'aud',
-                      amount: 180000
-                    });
-                    e.preventDefault();
+                    x.style.display = "none";
+                    z.style.display = "none";
+                    v.style.display = "none";
                 } else {
                     y.style.display = "none";
                 }
               }
               if (document.getElementById("corporate").selected) {
+                var x = document.getElementById("studentDiv");
+                var y = document.getElementById("educatorDiv");
+                var z = document.getElementById("corporateDiv");
+                var v = document.getElementById("startupDiv");
                 if (z.style.display === "none") {
                     z.style.display = "block";
-                    handler.open({
-                      name: 'Design Thinking Experience',
-                      description: 'DTx Melbourne March | Corporate',
-                      zipCode: true,
-                      currency: 'aud',
-                      amount: 250000
-                    });
-                    e.preventDefault();
+                    x.style.display = "none";
+                    y.style.display = "none";
+                    v.style.display = "none";
                 } else {
                     z.style.display = "none";
                 }
               }
               if (document.getElementById("startup").selected) {
+                var x = document.getElementById("studentDiv");
+                var y = document.getElementById("educatorDiv");
+                var z = document.getElementById("corporateDiv");
+                var v = document.getElementById("startupDiv");
                 if (v.style.display === "none") {
                     v.style.display = "block";
-                    handler.open({
-                      name: 'Design Thinking Experience',
-                      description: 'DTx Melbourne | Startup',
-                      zipCode: true,
-                      currency: 'aud',
-                      amount: 180000
-                    });
-                    e.preventDefault();
+                    x.style.display = "none";
+                    y.style.display = "none";
+                    z.style.display = "none";
                 } else {
                     v.style.display = "none";
                 }
@@ -170,6 +151,66 @@
               <button id="corporateButton">Enroll Now</button>
             </div>
 
+
+            <script>
+            var handler = StripeCheckout.configure({
+              key: 'pk_test_Z2sYjHY5lQfZMWQGmAOtbq9u',
+              image: 'http://learn.schoolofdesignthinking.echos.cc/img/badge.png',
+              locale: 'auto',
+              token: function(token) {
+                // You can access the token ID with `token.id`.
+                // Get the token ID to your server-side code for use.
+              }
+            });
+            document.getElementById('corporateButton').addEventListener('click', function(e) {
+              // Open Checkout with further options:
+              handler.open({
+                name: 'Design Thinking Experience',
+                description: 'DTx Melbourne March | Corporate',
+                zipCode: true,
+                currency: 'aud',
+                amount: 250000
+              });
+              e.preventDefault();
+            });
+            document.getElementById('studentButton').addEventListener('click', function(e) {
+              // Open Checkout with further options:
+              handler.open({
+                name: 'Design Thinking Experience',
+                description: 'DTx Melbourne | Student',
+                zipCode: true,
+                currency: 'aud',
+                amount: 100000
+              });
+              e.preventDefault();
+            });
+            document.getElementById('startupButton').addEventListener('click', function(e) {
+              // Open Checkout with further options:
+              handler.open({
+                name: 'Design Thinking Experience',
+                description: 'DTx Melbourne | Startup',
+                zipCode: true,
+                currency: 'aud',
+                amount: 180000
+              });
+              e.preventDefault();
+            });
+            document.getElementById('educatorButton').addEventListener('click', function(e) {
+              // Open Checkout with further options:
+              handler.open({
+                name: 'Design Thinking Experience',
+                description: 'DTx Melbourne | Educator',
+                zipCode: true,
+                currency: 'aud',
+                amount: 180000
+              });
+              e.preventDefault();
+            });
+            // Close Checkout on page navigation:
+            window.addEventListener('popstate', function() {
+              handler.close();
+            });
+            </script>
           </div>
         </div>
       </div>
