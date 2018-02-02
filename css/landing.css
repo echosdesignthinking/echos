@@ -264,7 +264,8 @@ select {
   background-color: #fff;
   max-width: 250px;
   border: solid 2px rgba(221,50,33,1);
-  margin-right: 10px
+  margin-right: 10px;
+  color: #000
 }
 
 button {
@@ -349,20 +350,4 @@ button {
   text-align: center;
   font-size: 28px;
   margin-top: 0px
-}
-
-#studentDiv {
-  display: none;
-}
-
-#educatorDiv {
-  display: none
-}
-
-#corporateDiv {
-  display: none
-}
-
-#startupDiv {
-  display: none
 }

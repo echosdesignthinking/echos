@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>DTX Melbourne | Echos</title>
+  <title>DTX Sydney | Echos</title>
   <meta charset="utf-8">
   <meta name="description" content="Learn Design Thinking for Real" />
   <meta name="keywords" content="design thinking" />
@@ -42,7 +42,7 @@
         <div class="row">
           <div class="col-md-4">
             <h2 style="color: #CA0AFF">Design Thinking Experience</h2>
-            <h3>Sydney</h3>
+            <h3>Melbourne</h3>
             <p>March 19th to 21st</p>
           </div>
           <div class="col-md-3">
@@ -59,100 +59,69 @@
             <p style="margin-top: 50px">Choose your type of investment:</p>
             <select>
               <option id="investment" class="active btn" data-filter="box">Choose your investiment</option>
-              <option id="student" class="btn">Student</option>
-              <option id="educator" class="btn">Educator</option>
-              <option id="corporate" class="btn">Corporate</option>
-              <option id="startup" class="btn">Startup</option>
+              <option id="student">Student</option>
+              <option id="educator">Educator</option>
+              <option id="corporate">Corporate</option>
+              <option id="startup">Startup</option>
             </select>
             <!-- Stripe Form -->
             <script src="https://checkout.stripe.com/checkout.js"></script>
 
             <script>
-
             function stripeButton() {
+              var x = document.getElementById("studentDiv");
+              var y = document.getElementById("educatorDiv");
+              var z = document.getElementById("corporateDiv");
+              var v = document.getElementById("startupDiv");
               if (document.getElementById("student").selected) {
-                var x = document.getElementById("studentDiv");
-                var y = document.getElementById("educatorDiv");
-                var z = document.getElementById("corporateDiv");
-                var v = document.getElementById("startupDiv");
                 if (x.style.display === "none") {
                     x.style.display = "block";
-                    y.style.display = "none";
-                    z.style.display = "none";
-                    v.style.display = "none";
                 } else {
                     x.style.display = "none";
                 }
               }
-
               if (document.getElementById("educator").selected) {
-                var x = document.getElementById("studentDiv");
-                var y = document.getElementById("educatorDiv");
-                var z = document.getElementById("corporateDiv");
-                var v = document.getElementById("startupDiv");
                 if (y.style.display === "none") {
                     y.style.display = "block";
-                    x.style.display = "none";
-                    z.style.display = "none";
-                    v.style.display = "none";
                 } else {
                     y.style.display = "none";
                 }
               }
-
               if (document.getElementById("corporate").selected) {
-                var x = document.getElementById("studentDiv");
-                var y = document.getElementById("educatorDiv");
-                var z = document.getElementById("corporateDiv");
-                var v = document.getElementById("startupDiv");
                 if (z.style.display === "none") {
                     z.style.display = "block";
-                    x.style.display = "none";
-                    y.style.display = "none";
-                    v.style.display = "none";
                 } else {
                     z.style.display = "none";
                 }
               }
-
               if (document.getElementById("startup").selected) {
-                var x = document.getElementById("studentDiv");
-                var y = document.getElementById("educatorDiv");
-                var z = document.getElementById("corporateDiv");
-                var v = document.getElementById("startupDiv");
                 if (v.style.display === "none") {
                     v.style.display = "block";
-                    x.style.display = "none";
-                    y.style.display = "none";
-                    z.style.display = "none";
                 } else {
                     v.style.display = "none";
                 }
               }
-
             }
-
-
             </script>
 
             <button onclick="stripeButton()">Apply</button>
             <br><br>
-            <div id="studentDiv" class="stripeButton">
+            <div id="studentDiv" style="display: none" class="stripeButton">
               <p>Student: AUD $1,000<br>
               <span style="font-size: 12px">You'll be asked to provide a valid ID</span></p>
               <button id="studentButton">Enroll Now</button>
             </div>
-            <div id="educatorDiv" class="stripeButton">
+            <div id="educatorDiv" style="display: none" class="stripeButton">
               <p>Educator: AUD $1,800<br>
               <span style="font-size: 12px">You'll be asked to provide a valid ID</span></p>
               <button id="educatorButton">Enroll Now</button>
             </div>
-            <div id="startupDiv" class="stripeButton">
+            <div id="startupDiv" style="display: none" class="stripeButton">
               <p>Startup: AUD $1,800<br>
               <span style="font-size: 12px">You'll be asked to provide a valid ID</span></p>
               <button id="startupButton">Enroll Now</button>
             </div>
-            <div id="corporateDiv" class="stripeButton">
+            <div id="corporateDiv" style="display: none" class="stripeButton">
               <p>Corporate: AUD $2,500<br>
               <span style="font-size: 12px">You'll be asked to provide a valid ID</span></p>
               <button id="corporateButton">Enroll Now</button>
@@ -169,55 +138,50 @@
                 // Get the token ID to your server-side code for use.
               }
             });
-
             document.getElementById('corporateButton').addEventListener('click', function(e) {
               // Open Checkout with further options:
               handler.open({
                 name: 'Design Thinking Experience',
-                description: 'DTx Sydney March | Corporate',
+                description: 'DTx | Sydney 19 - 21 March | Corporate',
                 zipCode: true,
                 currency: 'aud',
                 amount: 250000
               });
               e.preventDefault();
             });
-
             document.getElementById('studentButton').addEventListener('click', function(e) {
               // Open Checkout with further options:
               handler.open({
                 name: 'Design Thinking Experience',
-                description: 'DTx Sydney March | Student',
+                description: 'DTx | Sydney 19 - 21 March | Student',
                 zipCode: true,
                 currency: 'aud',
                 amount: 100000
               });
               e.preventDefault();
             });
-
             document.getElementById('startupButton').addEventListener('click', function(e) {
               // Open Checkout with further options:
               handler.open({
                 name: 'Design Thinking Experience',
-                description: 'DTx Sydney March | Startup',
+                description: 'DTx | Sydney 19 - 21 March | Startup',
                 zipCode: true,
                 currency: 'aud',
                 amount: 180000
               });
               e.preventDefault();
             });
-
             document.getElementById('educatorButton').addEventListener('click', function(e) {
               // Open Checkout with further options:
               handler.open({
                 name: 'Design Thinking Experience',
-                description: 'DTx Sydney March | Educator',
+                description: 'DTx | Sydney 19 - 21 March | Educator',
                 zipCode: true,
                 currency: 'aud',
                 amount: 180000
               });
               e.preventDefault();
             });
-
             // Close Checkout on page navigation:
             window.addEventListener('popstate', function() {
               handler.close();

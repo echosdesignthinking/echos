@@ -59,10 +59,10 @@
             <p style="margin-top: 50px">Choose your type of investment:</p>
             <select>
               <option id="investment" class="active btn" data-filter="box">Choose your investiment</option>
-              <option id="student" class="btn">Student</option>
-              <option id="educator" class="btn">Educator</option>
-              <option id="corporate" class="btn">Corporate</option>
-              <option id="startup" class="btn">Startup</option>
+              <option id="student">Student</option>
+              <option id="educator">Educator</option>
+              <option id="corporate">Corporate</option>
+              <option id="startup">Startup</option>
             </select>
             <!-- Stripe Form -->
             <script src="https://checkout.stripe.com/checkout.js"></script>
@@ -76,37 +76,29 @@
               if (document.getElementById("student").selected) {
                 if (x.style.display === "none") {
                     x.style.display = "block";
-                    console.log("activate student");
                 } else {
                     x.style.display = "none";
-                  console.log("DEactivate student");
                 }
               }
               if (document.getElementById("educator").selected) {
                 if (y.style.display === "none") {
                     y.style.display = "block";
-                    console.log("activate educator");
                 } else {
                     y.style.display = "none";
-                    console.log("DEactivate educator");
                 }
               }
               if (document.getElementById("corporate").selected) {
                 if (z.style.display === "none") {
                     z.style.display = "block";
-                    console.log("activate corporate");
                 } else {
                     z.style.display = "none";
-                    console.log("DEactivate corporate");
                 }
               }
               if (document.getElementById("startup").selected) {
                 if (v.style.display === "none") {
                     v.style.display = "block";
-                    console.log("activate startup");
                 } else {
                     v.style.display = "none";
-                    console.log("DEactivate startup");
                 }
               }
             }
@@ -150,7 +142,7 @@
               // Open Checkout with further options:
               handler.open({
                 name: 'Design Thinking Experience',
-                description: 'DTx Melbourne March | Corporate',
+                description: 'DTx | Melbourne 5 - 7 March | Corporate',
                 zipCode: true,
                 currency: 'aud',
                 amount: 250000
@@ -161,7 +153,7 @@
               // Open Checkout with further options:
               handler.open({
                 name: 'Design Thinking Experience',
-                description: 'DTx Melbourne | Student',
+                description: 'DTx | Melbourne 5 - 7 March | Student',
                 zipCode: true,
                 currency: 'aud',
                 amount: 100000
@@ -172,7 +164,7 @@
               // Open Checkout with further options:
               handler.open({
                 name: 'Design Thinking Experience',
-                description: 'DTx Melbourne | Startup',
+                description: 'DTx | Melbourne 5 - 7 March | Startup',
                 zipCode: true,
                 currency: 'aud',
                 amount: 180000
@@ -183,7 +175,7 @@
               // Open Checkout with further options:
               handler.open({
                 name: 'Design Thinking Experience',
-                description: 'DTx Melbourne | Educator',
+                description: 'DTx | Melbourne 5 - 7 March | Educator',
                 zipCode: true,
                 currency: 'aud',
                 amount: 180000
