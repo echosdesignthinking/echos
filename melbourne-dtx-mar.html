@@ -121,6 +121,9 @@
               token: function(token) {
                 // You can access the token ID with `token.id`.
                 // Get the token ID to your server-side code for use.
+                $("#stripeToken").val(token.id);
+                $("#stripeEmail").val(token.email);
+                $("#myForm").submit();
               }
             });
             document.getElementById('corporateButton').addEventListener('click', function(e) {
@@ -177,7 +180,12 @@
       </div>
     </div>
   </section>
-
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<form id="myForm" action="/echo/html/" method="POST">
+    <input type="hidden" id="stripeToken" name="stripeToken" />
+    <input type="hidden" id="stripeEmail" name="stripeEmail" />
+    <button id="customButton">Purchase</button>
+</form>
   <section>
     <div class="col-md-12 section10" style="margin-top: 50px">
       <div class="container">
