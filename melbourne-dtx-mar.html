@@ -181,37 +181,19 @@
     </div>
   </section>
 
-<form action="." method="post">
-        <noscript>You must <a href="http://www.enable-javascript.com" target="_blank">enable JavaScript</a> in your web browser in order to pay via Stripe.</noscript>
 
-        <input 
-            type="submit" 
-            value="Pay with Card"
-            data-key="pk_test_Z2sYjHY5lQfZMWQGmAOtbq9u"
-            data-amount="500"
-            data-currency="cad"
-            data-name="Example Company Inc"
-            data-description="Stripe payment for $5"
-        />
-
-        <script src="https://checkout.stripe.com/v2/checkout.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-        <script>
-        $(document).ready(function() {
-            $(':submit').on('click', function(event) {
-                event.preventDefault();
-                var $button = $(this),
-                    $form = $button.parents('form');
-                var opts = $.extend({}, $button.data(), {
-                    token: function(result) {
-                        $form.append($('<input>').attr({ type: 'hidden', name: 'stripeToken', value: result.id })).submit();
-                    }
-                });
-                StripeCheckout.open(opts);
-            });
-        });
-        </script>
-</form>    
+<div id="accepton-form"></div> 
+<script src="https://js.accepton.com/scripts/accepton.js" 
+  class="accepton-button"
+  data-public-key="pkey_1f97b0921b30578e"
+  data-redirect-uri=""
+  data-token="txn_39b88e46d63bb5fbab168090cb60336e"
+  data-additional-fields=""
+  data-customer-email=""
+  data-target="accepton-form">
+</script>
+<noscript>You must enable javascript to pay with this form.</noscript>
+    
     
   <section>
     <div class="col-md-12 section10" style="margin-top: 50px">
